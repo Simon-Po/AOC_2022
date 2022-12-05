@@ -21,18 +21,28 @@ alpha.update(alpha_upper)
 
 out = 0
 col = []
-for a in input:
+
+for x in range(len(input)):
     
-    b= len(a) // 2
-   
-    a1 = list(a[0:b])
-    a2 = list(a[b:len(a)])
-    c = list(set(a1).intersection(a2))
-    col.append(c)
+    if (len(input) > x + 2):
+        a1 = list(input[x])
+        a2 = list(input[x+1])
+        a3 = list(input[x+2])
+        
+        a4 = list(set(a1).intersection(a2))
+        col.append(list(set(a4).intersection(a3)))
+        
+        
+    
+    x = x + 3   
+print(col)
+    
+
 for x in col:
-    stri = x[0]
-    out = out + alpha[stri]
-    print(out)
+    if (x):
+        stri = x[0]
+        out = out + alpha[stri]
+        print(out)
 print(out)    
 
     
