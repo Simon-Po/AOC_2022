@@ -2518,14 +2518,48 @@ let splitI = input.split("\n");
 
 for (let i = 0; i < splitI.length; i++) {
     const element = splitI[i].split(" ");
-    compare(element)
-    console.log(score)
+    
+    
 }
 
-console.log(score)
 
 
 
+function compare2(gameArr) {
+    switch (true) {
+        case choosenPoint[gameArr[1]] == choosenHim[gameArr[0]] : 
+            score = score + 3;
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 2 && choosenHim[gameArr[0]] == 1 : 
+             score = score + 6;
+             score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 2 && choosenHim[gameArr[0]] == 3 : 
+        
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 3 && choosenHim[gameArr[0]] == 1 : 
+        
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 3 && choosenHim[gameArr[0]] == 2 : 
+            score = score + 6;
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 1 && choosenHim[gameArr[0]] == 2 : 
+        
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        case choosenPoint[gameArr[1]] == 1 && choosenHim[gameArr[0]] == 3 : 
+            score = score + 6;
+            score = score + choosenPoint[gameArr[1]];
+            break;
+        default:
+            break;
+}
+
+}
 
 function compare(gameArr) {
     switch (true) {
