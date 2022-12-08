@@ -5,6 +5,13 @@
             "name": "Launch App",
             "request": "launch",
             "mainClass": "Day5_JAVA.App",
+            "projectName": "AOC_2022_2c427adf"
+        },
+        {
+            "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "Day5_JAVA.App",
             "projectName": "AOC_2022_e9ee22ad"
         },
         {

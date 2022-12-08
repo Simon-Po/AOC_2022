@@ -30,6 +30,7 @@ public class StackHandler {
             // System.out.println(data[i]);
             String[] s = data[i].split("");
             for (int j = 0; j < s.length; j++) {
+                System.out.println(data[i]);
                 this.stackList.get(i).push(s[j]);
             }
 
