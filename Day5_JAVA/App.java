@@ -17,6 +17,8 @@ public class App {
         Reader r1 = new Reader("input.txt");
         String[] input = r1.read().split("\n");
         // System.out.println(stacks);
+
+        Stack<String> tempStack = new Stack<String>();
         for (int i = 0; i < input.length; i++) {
             String[] temp = input[i].split("");
             int amount,from,to;
@@ -33,9 +35,12 @@ public class App {
             
             for (int j = 0; j < amount; j++) {
                 String tmp = stacks.get(from - 1).pop();
+                tempStack.push(tmp);
+            }
+            for (int j = 0; j < amount; j++) {
+                String tmp = tempStack.pop();
                 stacks.get(to - 1).push(tmp);
             }
-            
         }
 
         System.out.println(stacks);
